@@ -3,15 +3,18 @@
   "name": "ThrottleMind",
   "description": " ThrottleMind is a Chrome extension that helps you to stay focused on your work by slowing down distracting websites.",
   "version": "1.0.1",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_title": "React Boilerplate",
     "default_icon": "icon.png"
   },
   "options_page": "options.html",
-  "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+  "background": {
+    "service_worker": "background.js"
   }
 }

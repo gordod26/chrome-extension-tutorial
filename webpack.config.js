@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     popup: path.resolve("src/popup/popup.tsx"),
     options: path.resolve("src/options/options.tsx"),
+    background: path.resolve("src/background/background.ts"),
   },
   plugins: [
     new CopyPlugin({
@@ -52,6 +53,12 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
+  },
+  optimization: {
+    splitChunks: {
+      // include all types of chunks
+      chunks: "all",
+    },
   },
 };
 
